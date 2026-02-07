@@ -57,9 +57,21 @@ function noHover() {
     // If still managed to click it
     setTimeout(() => {
         if (Math.random() > 0.7) {
-            alert("Come on! You know you want to! 💕");
+            showPopup();
         }
     }, 200);
+}
+
+// Show custom popup
+function showPopup() {
+    const modal = document.getElementById('popupModal');
+    modal.classList.add('active');
+}
+
+// Close popup
+function closePopup() {
+    const modal = document.getElementById('popupModal');
+    modal.classList.remove('active');
 }
 
 // Create confetti effect
